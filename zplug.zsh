@@ -23,7 +23,8 @@
 
 if zplug > /dev/null
 then
-    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+    # `curl .. | zsh` will make the successive `zplus` fail because it launches a new shell and run commands inside it without affecting the current shell.
+    eval $(curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh)
 fi
 
 zplug "zsh-users/zsh-autosuggestions"
