@@ -16,8 +16,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install zsh
 
-      - name: Show the version of `dirname`
-        run: dirname --version
+      - name: Create a symbolic link to `.zshrc`
+        run: ln -s $HOME/.zshrc .zshrc
 
       - name: Read the `.zshrc` file
         run: zsh -ex .zshrc
