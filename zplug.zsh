@@ -21,10 +21,15 @@
 
 [ -r $HOME/.zplug/init.zsh ] && source $HOME/.zplug/init.zsh
 
-if zplug > /dev/null
+if where zplug > /dev/null
 then
-    # `curl .. | zsh` will make the successive `zplus` fail because it launches a new shell and run commands inside it without affecting the current shell.
-    eval $(curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh)
+else
+    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh|zsh
+
+    # The previous command launches a new shell and install zplug there, but it
+    # does not affect the current shell. The following `exec` replaces the
+    # current shell with a newly launched shell to load the installed zplug.
+    exec zsh
 fi
 
 zplug "zsh-users/zsh-autosuggestions"
