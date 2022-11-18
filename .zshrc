@@ -17,7 +17,7 @@ zstyle :compinstall filename '$HOME/.zshrc'
 #aliases {{{
 
 chpwd(){
-        ls --color=auto
+    ls --color=auto
 }
 
 # }}}
