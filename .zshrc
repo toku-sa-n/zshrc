@@ -2,16 +2,6 @@
 readonly ZSH_DIRECTORY=$(dirname $(readlink -m $HOME/.zshrc))
 
 source $ZSH_DIRECTORY/zplug.zsh
-#Colors definition {{{
-local DEFAULT=$'%{^[[m%}'$
-local RED=$'%{^[[1;31m%}'$
-local GREEN=$'%{^[[1;32m%}'$
-local YELLOW=$'%{^[[1;33m%}'$
-local BLUE=$'%{^[[1;34m%}'$
-local PURPLE=$'%{^[[1;35m%}'$
-local LIGHT_BLUE=$'%{^[[1;36m%}'$
-local WHITE=$'%{^[[1;37m%}'$
-# }}}
 #setout{{{
 setopt auto_param_slash
 setopt mark_dirs
