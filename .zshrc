@@ -64,7 +64,7 @@ vim_expand_symlinks () {
         fi
     done
 
-    \vim -p "${args[@]}"
+    \vim "${args[@]}"
 }
 
 
