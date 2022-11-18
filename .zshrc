@@ -12,8 +12,6 @@ command -v autojump >/dev/null 2>&1 && source /usr/share/autojump/autojump.zsh
 #autoload{{{
 #compinit{{{
 zstyle :compinstall filename '$HOME/.zshrc'
-autoload -Uz compinit
-compinit
 #}}}
 autoload -U promptinit
 promptinit

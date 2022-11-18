@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit
+
 function zle-line-init zle-keymap-select {
     case $KEYMAP in
         vicmd)
