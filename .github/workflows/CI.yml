@@ -11,10 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install Zsh
-        run: |
-          sudo apt-get update
-          sudo apt-get install zsh
-
       - name: Read the `.zshrc` file
         run: zsh -ex .zshrc
