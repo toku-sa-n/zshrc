@@ -16,14 +16,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install zsh
 
-      - name: Create a symbolic link to `.zshrc` if necessary
-        run: ln -s $HOME/.zshrc .zshrc || true
+      - name: Remove the existing `.zshrc`
+        run: rm -rf $HOME/.zshrc
 
-      - name: Show the current directory path
-        run: pwd
-
-      - name: List files in the current directory
-        run: ls -a
+      - name: Create a symbolic link to `.zshrc`
+        run: ln -s $HOME/.zshrc .zshrc
 
       - name: Read the `.zshrc` file
         run: zsh -ex .zshrc
