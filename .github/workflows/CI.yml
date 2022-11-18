@@ -19,6 +19,9 @@ jobs:
       - name: Create a symbolic link to `.zshrc` if necessary
         run: ln -s $HOME/.zshrc .zshrc || true
 
+      - name: Show the current directory path
+        run: pwd
+
       - name: List files in the current directory
         run: ls -a
 
