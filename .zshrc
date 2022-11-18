@@ -9,7 +9,6 @@ done
 #z command
 command -v autojump >/dev/null 2>&1 && source /usr/share/autojump/autojump.zsh
 [[ -r "/etc/profile.d/cnf.sh" ]] && . /etc/profile.d/cnf.sh
-[[ -r "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #}}}
 #autoload{{{
 #compinit{{{
