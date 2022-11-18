@@ -1,4 +1,5 @@
-readonly ZSH_DIRECTORY=$(dirname $(readlink $HOME/.zshrc))
+# `readlink` fails if it reads a non-symbolic file without the `-m` option.
+readonly ZSH_DIRECTORY=$(dirname $(readlink -m $HOME/.zshrc))
 
 source $ZSH_DIRECTORY/zplug.zsh
 #Colors definition {{{
