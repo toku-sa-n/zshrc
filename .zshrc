@@ -47,7 +47,6 @@ zstyle ':vcs_info:git:*' unstagedstr '+'
 zstyle ':vcs_info:git:*' stagedstr '●'
 zstyle ':vcs_info:git:*' formats '%b %u%c'  # %b: current branch, %u: unstagedstr, %c: stagedstr
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh && export FZF_DEFAULT_COMMAND='\find .'
 # }}}
 #aliases {{{
 
