@@ -25,6 +25,7 @@ autoload -Uz vcs_info
 precmd_vcs_info(){vcs_info}
 precmd_functions+=( precmd_vcs_info )
 RPROMPT=\$vcs_info_msg_0_
+zstyle :compinstall filename '$HOME/.zshrc'
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' unstagedstr '+'
 zstyle ':vcs_info:git:*' stagedstr '●'
