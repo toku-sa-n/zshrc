@@ -6,3 +6,4 @@ export SAVEHIST=1000
 export GPG_TTY=$(tty)
 [[ -r "$HOME/.config/bat/syntaxes/Man.sublime-syntax" ]] && export MANPAGER="sh -c 'sed -e s/.\\\\x08//g|bat -l man -p'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh && export FZF_DEFAULT_COMMAND='\find .'
+[ -f "$HOME/.ghcup/env" ] && source "/home/hiroki/.ghcup/env" # ghcup-env
