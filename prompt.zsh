@@ -1,5 +1,9 @@
 autoload -Uz compinit
 compinit
+autoload -U promptinit
+promptinit
+autoload -Uz colors
+colors
 
 function zle-line-init zle-keymap-select {
     case $KEYMAP in

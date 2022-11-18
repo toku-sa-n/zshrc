@@ -13,10 +13,6 @@ command -v autojump >/dev/null 2>&1 && source /usr/share/autojump/autojump.zsh
 #compinit{{{
 zstyle :compinstall filename '$HOME/.zshrc'
 #}}}
-autoload -U promptinit
-promptinit
-autoload -Uz colors
-colors
 # }}}
 #aliases {{{
 
