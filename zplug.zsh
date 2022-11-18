@@ -21,8 +21,8 @@
 
 [ -r $HOME/.zplug/init.zsh ] && source $HOME/.zplug/init.zsh
 
-where zplug > /dev/null
-if [ $? -ne 0 ]; then
+if zplug > /dev/null
+then
     curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
 
