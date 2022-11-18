@@ -23,7 +23,7 @@
 
 where zplug > /dev/null
 if [ $? -ne 0 ]; then
-    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+    eval $(curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh)
 fi
 
 zplug "zsh-users/zsh-autosuggestions"
