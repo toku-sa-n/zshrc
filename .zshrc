@@ -71,5 +71,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export FLYCTL_INSTALL="/home/hiroki/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"

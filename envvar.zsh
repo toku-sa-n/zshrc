@@ -1,4 +1,5 @@
-export PATH="$HOME/cquery/build/release/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.6.0/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/.cargo/bin:$PATH:$HOME/go/bin:$HOME/.ghcup/bin"
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$HOME/cquery/build/release/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.6.0/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/.cargo/bin:$HOME/go/bin:$HOME/.ghcup/bin:$FLYCTL_INSTALL/bin:$PATH"
 export BSTINPUTS=$BSTINPUTS:/usr/share/texmf-dist/pbibtex/bst
 export HISTFILE=$HOME/.histfile
 export HISTSIZE=1000
