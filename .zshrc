@@ -1,9 +1,10 @@
 # `readlink` fails if it reads a non-symbolic file without the `-m` option.
 readonly ZSH_DIRECTORY=$(dirname $(readlink -m $HOME/.zshrc))
 
-source $ZSH_DIRECTORY/zplug.zsh
-source $ZSH_DIRECTORY/setopt.zsh
-source $ZSH_DIRECTORY/envvar.zsh
+for f in zplug.zsh setopt.zsh envvar.zsh
+do
+    source $ZSH_DIRECTORY/$f
+done
 #Environment paths{{{
 #}}}
 #sources{{{
