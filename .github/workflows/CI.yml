@@ -16,8 +16,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install zsh
 
-      - name: Create a symbolic link to `.zshrc`
-        run: ln -s $HOME/.zshrc .zshrc
+      - name: Create a symbolic link to `.zshrc` if necessary
+        run: ln -s $HOME/.zshrc .zshrc || true
 
       - name: Read the `.zshrc` file
         run: zsh -ex .zshrc
