@@ -36,10 +36,9 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # See https://github.com/knu/zsh-manydots-magic/issues/2.
-zplug "knu/zsh-manydots-magic", \
+zplug "twang817/zsh-manydots-magic", \
     use:manydots-magic, \
-    defer:2, \
-    hook-build: "curl https://github.com/twang817/zsh-manydots-magic/commit/6525d31436fd3ea9ca0de877c7dccc5763f41e46.patch|patch -p1"
+    defer:2
 
 if ! zplug check --verbose; then
     printf 'Install?[y/N]:'
