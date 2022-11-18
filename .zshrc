@@ -1,7 +1,7 @@
 # `readlink` fails if it reads a non-symbolic file without the `-m` option.
 readonly ZSH_DIRECTORY=$(dirname $(readlink -m $HOME/.zshrc))
 
-for f in zplug.zsh setopt.zsh envvar.zsh bindkey.zsh alias.zsh
+for f in zplug.zsh setopt.zsh envvar.zsh bindkey.zsh alias.zsh distro_spec.zsh
 do
     source $ZSH_DIRECTORY/$f
 done
@@ -57,31 +57,6 @@ chpwd(){
         ls --color=auto
 }
 
-# }}}
-# Aliases which depends on the distribution using now{{{
-
-arch(){
-    alias detailpac='pacman -Qi'
-    alias ns='sudo netctl start'
-    alias inst='sudo pacman -S'
-    alias unst='sudo pacman -Rs'
-    alias upgr='yes|sudo pacman -Syu && common_upgr'
-    alias paclist=$'pacman -Ql|awk -F " " \'{print $1}\'|uniq|less'
-}
-
-gentoo(){
-    alias inst='sudo emerge -avt'
-    alias unst='sudo emerge -cav'
-}
-
-(){
-    local dist=$(cat /etc/*-release|grep '^ID'|awk -F '[=]' '{print $2}')
-
-    case $dist in
-        "arch" ) arch ;;
-        "gentoo" ) gentoo;;
-    esac
-}
 # }}}
 
 [ -f "/home/hiroki/.ghcup/env" ] && source "/home/hiroki/.ghcup/env" # ghcup-env
