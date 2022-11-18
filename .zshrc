@@ -5,8 +5,6 @@ for f in zplug.zsh setopt.zsh envvar.zsh bindkey.zsh
 do
     source $ZSH_DIRECTORY/$f
 done
-#Environment paths{{{
-#}}}
 #sources{{{
 #z command
 command -v autojump >/dev/null 2>&1 && source /usr/share/autojump/autojump.zsh
@@ -24,8 +22,6 @@ promptinit
 autoload -Uz colors
 colors
 # }}}
-#bindkey{{{
-#}}}
 #prompt{{{
 
 function zle-line-init zle-keymap-select {
