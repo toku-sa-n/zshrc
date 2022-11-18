@@ -23,12 +23,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+[ -r $HOME/.zplug/init.zsh ] && source $HOME/.zplug/init.zsh
+
 where zplug > /dev/null
 if [ $? -ne 0 ]; then
     curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
-
-[ -r $HOME/.zplug/init.zsh ] && source $HOME/.zplug/init.zsh
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
