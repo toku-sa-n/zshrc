@@ -8,7 +8,6 @@ done
 #sources{{{
 #z command
 command -v autojump >/dev/null 2>&1 && source /usr/share/autojump/autojump.zsh
-[[ -r "/etc/profile.d/cnf.sh" ]] && . /etc/profile.d/cnf.sh
 #}}}
 #autoload{{{
 #compinit{{{
