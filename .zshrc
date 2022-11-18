@@ -2,28 +2,7 @@
 readonly ZSH_DIRECTORY=$(dirname $(readlink -m $HOME/.zshrc))
 
 source $ZSH_DIRECTORY/zplug.zsh
-#setout{{{
-setopt auto_param_slash
-setopt mark_dirs
-setopt list_types
-setopt list_packed
-setopt auto_menu
-setopt auto_param_keys
-setopt magic_equal_subst
-setopt complete_in_word
-setopt always_last_prompt
-setopt print_eight_bit
-setopt extended_glob
-setopt globdots
-setopt correct
-setopt prompt_subst
-setopt hist_ignore_dups
-setopt hist_save_no_dups
-setopt no_flow_control
-setopt auto_cd
-setopt auto_pushd
-setopt pushd_ignore_dups
-# }}}
+source $ZSH_DIRECTORY/setopt.zsh
 #Environment paths{{{
 export PATH="$HOME/cquery/build/release/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.6.0/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/.cargo/bin:$PATH:$HOME/go/bin:$HOME/.ghcup/bin"
 export BSTINPUTS=$BSTINPUTS:/usr/share/texmf-dist/pbibtex/bst
