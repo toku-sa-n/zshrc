@@ -17,4 +17,4 @@ jobs:
           sudo apt-get install zsh
 
       - name: Read the `.zshrc` file
-        run: zsh .zshrc
+        run: zsh -e .zshrc
