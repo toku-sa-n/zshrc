@@ -3,7 +3,7 @@ vim_expand_symlinks () {
     args=()
     for i in $@; do
         if [[ -h $i ]]; then
-            args+=$(readlink $i)
+            args+=$(readlink -f $i)
         else
             args+=$i
         fi
