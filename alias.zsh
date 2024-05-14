@@ -64,7 +64,7 @@ alias v=vim
 
 [ -x "$(command -v bat)" ] && alias cat='bat' && alias less='bat'
 [ -x "$(command -v fuck)" ] && eval $(thefuck --alias) && alias f="fuck"
-[ -x "$(command -v exa)" ] && alias ls='exa --group-directories-first'
+[ -x "$(command -v eza)" ] && alias ls='eza --group-directories-first'
 [ -x "$(command -v fd)" ] && alias find="fd"
 [ -x "$(command -v ack)" ] && alias grep='ack'
 [ -x "$(command -v fzf)" ] && alias vf='vim $(fzf)'
